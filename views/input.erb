@@ -1,0 +1,29 @@
+<h1>Find the cost of your parcel!</h1>
+
+<form action="/output">
+  <div class="form-group">
+    <label for="selection">Select Shipping Methods</label>
+    <select class="form-control" id="selection" name="selection">
+      <option>Ground</option>
+      <option>Two Day</option>
+      <option>Overnight</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="length">Length of package</label>
+    <input id="l" name="length" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="width">Width of package</label>
+    <input id="w" name="width" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="height">Height of package</label>
+    <input id="h" name="height" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="weight">Weight of package</label>
+    <input id="weight" name="weight" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Go!</button>
+</form>
