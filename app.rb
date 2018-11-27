@@ -13,8 +13,8 @@ get('/output') do
   @width = params.fetch("width").to_i
   @height = params.fetch("height").to_i
   @weight = params.fetch("weight").to_i
-  @ship_type = params.fetch("selection")
-  package = Parcel.new(@length, @width, @height, @weight)
+  @shipping = params.fetch("selection")
+  package = Parcel.new(@length, @width, @height, @weight, @shipping
   @package_volume = package.volume()
   @total_cost = package.cost_to_ship()
   erb(:output)

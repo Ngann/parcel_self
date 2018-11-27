@@ -1,11 +1,11 @@
 class Parcel
 
-
-  def initialize(length, width, height, weight)
+  def initialize(length, width, height, weight, shipping)
     @length = length
     @width = width
     @height = height
     @weight = weight
+    @shipping = shipping
   end
 
   def volume
@@ -30,11 +30,11 @@ class Parcel
     ship_bucket.store("Ground", 10)
     ship_bucket.store("Two Day", 15)
     ship_bucket.store("Overnight", 20)
-    @ship_bucket = ship_bucket.select {|key| key === @ship_type}.values.first
+    @ship_bucket = ship_bucket.select {|key| key === @shipping}.values.first
   end
 
   def cost_to_ship
-    weight_cost
+    weight_cost + ship_cost
   end
 
 end
